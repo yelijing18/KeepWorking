@@ -5,7 +5,6 @@ import time
 import pyautogui
 from pyautogui import FailSafeException
 
-pyautogui.FAILSAFE = True
 pyautogui.PAUSE = 1
 
 
