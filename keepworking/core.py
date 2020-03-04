@@ -5,14 +5,16 @@ import time
 import pyautogui
 from pyautogui import FailSafeException
 
-pyautogui.PAUSE = 1
+from . import settings
+
+pyautogui.PAUSE = settings.EVENT_INTERVAL
 
 
 def start():
     try:
         print('请在倒计时内选中需要保持活动的窗口')
-        for i in range(5):
-            print(5 - i)
+        for i in range(settings.COUNTDOWN):
+            print(settings.COUNTDOWN - i)
             time.sleep(1)
         print('移动鼠标到屏幕边角以退出程序')
         while True:

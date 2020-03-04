@@ -26,5 +26,8 @@ setup(
     ],
     packages=find_packages(exclude=['tests']),
     python_requires='>=3.6',
-    install_requires=['pyautogui'],
+    install_requires=['pyautogui', 'python-dotenv', 'python-decouple'],
+    package_data={
+        '': ['default.env'],
+    },
 )
